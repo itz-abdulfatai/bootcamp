@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: #bcbcbc;
+        height: 300px;
+
+        text-align: center;
+        padding: 20px;
+        background-image: url("big-bg.jpg");
+        background-size: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-attachment: fixed;
+        padding-top: 40px;
+      }
+
+      h1 {
+        text-transform: capitalize;
+        font-size: 40px;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        color: white;
+        justify-content: center;
+        gap: 20px;
+        background-color: #333;
+        padding: 10px 0;
+      }
+
+      nav a {
+        color: wheat;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: background-color 0.5s;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      .images {
+        gap: 20px;
+        padding: 50px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .images img {
+        width: 500px;
+        object-fit: cover;
+        max-width: 100%;
+        transition: all 1s;
+      }
+
+      .images img:hover {
+        transform: translateY(10px);
+        box-shadow: 10px 10px 10px #24a9bb, 5px 5px 10px #333333a6, 15px 15px 20px #e75613;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+      }
+
+      main p {
+        color: #333;
+      }
+
+
+
+
+      .form-container {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #ccc;
+            color: #333;
+        }
+        footer {
+          background-color: #333;
+          color: #ffffff;
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        footer a {
+          color: wheat;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        footer a:hover {
+          color: #ccc;
+          text-decoration: underline;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>my awesome blog</h1>
+        <p>best blog in the world</p>
+      </div>
+
+      <nav>
+        <a href="">home</a><a href="about.html">about</a><a href="">blog</a
+        ><a href="">contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="images">
+        <img src="book-3.webp" alt="" /><img src="book-6.jpg.webp" alt="" />
+      </div>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem
+        fugit tempora sint ipsam minus? Perferendis et repudiandae vel nisi
+        vitae maxime veniam sint voluptatum dolor fuga enim quis consequatur
+        corporis iusto tempore minima nulla saepe eligendi, error est? Qui culpa
+        aliquam dolorum laborum harum iste quod ea ratione in provident
+        voluptates, hic illum ipsum deleniti porro fugiat velit sequi doloribus
+        magni officia! Rem dolores qui, animi consequatur, provident ut
+        laboriosam sed laborum dolore sapiente impedit quae odit quod unde non.
+        Aperiam soluta tenetur, architecto molestiae corrupti hic, vero eaque
+        maiores maxime id sint praesentium, ipsa inventore nam ab! Nihil,
+        nostrum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+        accusantium illo aliquid reprehenderit. Officiis ab accusamus placeat,
+        rem mollitia quidem ipsa maiores magnam deserunt a architecto dolores
+        maxime labore beatae tenetur voluptatem quia delectus dolore quae. Sequi
+        id praesentium culpa repellat est eveniet consequuntur ea illo porro,
+        architecto eum voluptates vel laboriosam fugiat, temporibus totam
+        tempore cum minus in ab. Molestias, officiis adipisci maiores aspernatur
+        mollitia repellendus tempore? Laudantium in quibusdam, illo optio, odio,
+        voluptatum dolores mollitia molestiae accusantium consectetur nihil
+        sequi ullam porro repellendus perferendis officiis eius est at debitis?
+        Dolorum adipisci enim aspernatur culpa omnis possimus reprehenderit
+        reiciendis, ea laboriosam dignissimos debitis ipsam voluptatum corrupti
+        labore minus provident officiis et. Iusto id ab quibusdam deserunt
+        delectus nihil, veniam perspiciatis ea mollitia assumenda sunt totam
+        laboriosam eveniet esse corporis exercitationem atque nobis quos nam
+        illo. Incidunt laborum cum suscipit eos, neque alias quaerat dolore
+        ullam beatae, maiores, hic impedit.
+      </p>
+    </main>
+    <div class="form-container">
+      <form>
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
+          </div>
+
+          <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          </div>
+
+          <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob">
+          </div>
+
+          <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                  <option value="">Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+
+          <div class="form-group">
+              <button type="submit">Submit</button>
+          </div>
+      </form>
+
+  </div>
+
+  <footer>
+    <p> 2023 My Awesome Blog. All rights reserved.</p>
+    <ul>
+      <li><a href="">Privacy Policy</a></li>
+      <li><a href="">Terms & Conditions</a></li>
+    </ul>
+    <div>
+      <a href="#"><img src="facebook.png" alt="" /></a>
+      <a href="#"><img src="twitter.png" alt="" /></a>
+      <a href="#"><img src="instagram.png" alt="" /></a>
+      <a href="#"><img src="youtube.png" alt="" /></a>
+    </div>
+  </footer>
+  </body>
+</html>

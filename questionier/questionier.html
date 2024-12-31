@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Questionnaire</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f4fb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 50px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            /* background-color: aqua; */
+            width: 60px;
+            flex-wrap: wrap;
+            /* margin-bottom: 16px; */
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b5e;
+        }
+
+        form {
+            background-color: #263b5e;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px;
+            /* border-radius: 20px; */
+            color: #ffffff;
+            box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+            max-height: 75vh;
+            overflow-y: auto;
+            border: 1px solid #263b5e;
+        }
+
+        label {
+            font-weight: bold;
+
+        }
+
+        .radio-group label {
+font-weight: normal;
+        }
+
+
+        input[type="text"] , textarea {
+            outline: none !important;
+            resize: none;
+            border: none;
+            padding: 10px 5px;
+            font-size: 13px;
+            border-radius: 5px;
+            transition: all 1s;
+            box-shadow: none;
+
+
+
+
+        }
+
+        input[type="text"]:focus , textarea:focus {
+            transform: translateX(-10px) translateY(-10px);
+            box-shadow: 
+            2px 2px ,
+            4px 4px,
+            6px 6px,
+            8px 8px,
+            10px 10px,
+            12px 12px 12px;
+        }
+
+        input[type="text"]::placeholder , textarea::placeholder {
+            color: #8b8b8b;
+        }
+
+        button, input[type='reset'] {
+            background-color: #17b978;
+            color: #ffffff;
+            padding: 13px 23px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover, input[type='reset']:hover {
+            background-color: #7fe0af;
+        }
+
+
+
+    </style>
+
+<script>
+    function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const structuredData = {};
+
+        for (const [key, value] of formData.entries()) {
+            structuredData[key] = value;
+        }
+        let text = 'form results \n';
+
+        for (const [key, value] of Object.entries(structuredData)) {
+            text += `${key.replace('-', ' ')}: ${value}\n`;
+        }
+
+        alert(text);
+    }
+</script>
+</head>
+<body>
+
+    <h1>Tech Questionnaire</h1>
+
+    <form onsubmit="handleSubmit(event)" action="#">
+
+        <label>Do you know what coding is? What do you think people use it for?</label>
+        <div class="radio-group">
+            <input type="radio" name="coding-knowledge" value="yes" id="coding-yes"> <label for="coding-yes">Yes</label>
+            <input type="radio" name="coding-knowledge" value="no" id="coding-no"> <label for="coding-no">No</label>
+
+
+        </div>
+
+        <textarea rows="5" name="favorite-app" placeholder="What do you think people use it for?"></textarea>
+
+        <label for="favorite-app">What is your favorite website or app, and what do you like most about it?</label>
+        <textarea rows="5" id="favorite-app" name="favorite-app" placeholder="Type your answer here..."></textarea>
+
+
+        <label>Have you ever wondered how your favorite website or app is made? What do you think makes it work?</label>
+
+        <div class="radio-group">
+            <input type="radio" name="wondering" value="yes" id="wondering-yes"> <label for="wondering-yes">Yes</label>
+            <input type="radio" name="wondering" value="no" id="wondering-no"> <label for="wondering-no">No</label>
+        </div>
+
+        <textarea rows="5" name="wondering-details" placeholder="Share your thoughts..."></textarea>
+
+
+
+        <label for="problems-tech">What problems in your school, home, or community do you think technology could solve?</label>
+        <textarea rows="5" id="problems-tech" name="problems-tech" placeholder="Type your answer here..."></textarea>
+
+
+        <label>If you had the chance to learn how to create websites or games for free, would you take it? Why or why not?</label>
+
+<div class="radio-group">
+
+    <input type="radio" name="free-learning" value="yes" id="free-yes"> <label for="free-yes">Yes</label>
+    <input type="radio" name="free-learning" value="no" id="free-no"> <label for="free-no">No</label>
+</div>
+        <textarea rows="5" name="free-learning-reason" placeholder="Explain your answer..."></textarea>
+
+
+        <button type="submit" class="submit-btn">Submit</button>
+
+        <input type="reset" value="reset">
+
+
+
+    </form>
+
+
+    
+</body>
+</html>

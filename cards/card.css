@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #389dfd;
+    margin-bottom: 30px;  
+}
+
+body {
+    background-color: #ddeaff;
+}
+
+
+div{
+    background-color: #edf4ff;
+    padding: 40px;
+    border-radius: 50px;
+    width: 250px;
+    
+}
+

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(77, 197, 221);
+    text-align: center;
+    padding: 50px;
+}
+
+button {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    color: rgb(77, 197, 221) ;
+}
+
+ul {
+    background-color: #333;
+    color: #9cfa76;
+    min-height: 50px;
+    text-align: left;
+    padding-left: 50px ;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Questionnaire</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #181941;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            color: #181941;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #17b978;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #181941;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #17b978;
+            color: #ffffff;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #13a067;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Tech Questionnaire</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label>Do you know what coding is? What do you think people use it for?</label>
+                <input type="radio" name="coding-knowledge" value="yes" id="coding-yes"> <label for="coding-yes">Yes</label>
+                <input type="radio" name="coding-knowledge" value="no" id="coding-no"> <label for="coding-no">No</label>
+            </div>
+            <div class="form-group">
+                <label for="favorite-app">What is your favorite website or app, and what do you like most about it?</label>
+                <textarea id="favorite-app" name="favorite-app" placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Have you ever wondered how your favorite website or app is made? What do you think makes it work?</label>
+                <input type="radio" name="wondering" value="yes" id="wondering-yes"> <label for="wondering-yes">Yes</label>
+                <input type="radio" name="wondering" value="no" id="wondering-no"> <label for="wondering-no">No</label>
+                <textarea name="wondering-details" placeholder="Share your thoughts..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="problems-tech">What problems in your school, home, or community do you think technology could solve?</label>
+                <textarea id="problems-tech" name="problems-tech" placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>If you had the chance to learn how to create websites or games for free, would you take it? Why or why not?</label>
+                <input type="radio" name="free-learning" value="yes" id="free-yes"> <label for="free-yes">Yes</label>
+                <input type="radio" name="free-learning" value="no" id="free-no"> <label for="free-no">No</label>
+                <textarea name="free-learning-reason" placeholder="Explain your answer..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

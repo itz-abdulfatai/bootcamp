@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: url('https://picsum.photos/1200/600?random=1') ;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            color: #fff;
+            background-attachment: fixed;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px #33333348;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            background-color: #3333334d;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            margin-bottom: 2rem;
+        }
+
+        .hero img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .hero p {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+
+        .posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .post {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 1 1 calc(33% - 2rem);
+            /* max-width: calc(33% - 2rem); */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1rem;
+        }
+
+        .post-content h2 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .post-content p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .post-content a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+/* commented list of classnames related to my form */
+/* 
+form-section
+form-heading
+form.form-parent
+group
+name-group
+category-group
+file-group
+release-group
+
+
+*/
+
+.form-section {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.form-heading {
+    text-transform: capitalize;
+
+}
+
+input {
+    padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+    
+}
+
+input:hover {
+    border: solid 1px #bcbcbc;
+    background-color: #f9f9f9;
+}
+
+input:focus , select:focus{
+    outline: none;
+}
+
+.tex-area {
+    padding: 5px;
+    resize: none;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+}
+
+.tex-area:hover {
+    border: solid 1px #bcbcbc;
+    background-color: #f9f9f9;
+}
+
+.tex-area:focus {
+    outline: none;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #666;
+}
+
+.submit-button:active {
+    background-color: #555;
+}
+
+
+
+select {
+    padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+}
+select:hover {
+    border: solid 1px #bcbcbc;
+    background-color: #f9f9f9;
+}
+
+.group {
+    display: flex;
+    gap: 5px;
+    
+}
+
+.group * {
+    width: 100%;
+}
+
+.form-parent {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+border-radius: 20px;
+padding: 1rem;
+box-shadow: 2px 3px 15px #33333346;
+    align-items: stretch;
+    transition: box-shadow 1s ease;
+
+}
+
+.form-parent:hover {
+    box-shadow: none;
+    border: solid 1px #e9e9e9;
+
+}
+
+
+@media (max-width:700px) {
+    .posts {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .post {
+        width: 90%;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Awesome Blog</h1>
+    <p>Insights, stories, and ideas worth sharing</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main class="container">
+    <section class="hero">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nobis fugit id itaque est dolores ducimus, ea, dicta aspernatur omnis at? Ad saepe tempora voluptates minima quibusdam autem obcaecati voluptatem voluptatum. Velit, sequi non iste blanditiis, esse exercitationem ducimus nesciunt aut hic officia sunt sed maiores neque harum excepturi soluta, deleniti dolore corrupti! Libero, voluptatem illo distinctio voluptatibus sint adipisci, possimus alias modi maiores eos placeat dolorem perspiciatis quae corporis harum, facere aliquid nobis dicta! Maiores explicabo impedit voluptate iste at deserunt harum quisquam culpa ab ad similique, repudiandae veniam ullam, molestias voluptatibus architecto, delectus eligendi nulla quo quia. Excepturi!</p>
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nobis fugit id itaque est dolores ducimus, ea, dicta aspernatur omnis at? Ad saepe tempora voluptates minima quibusdam autem obcaecati voluptatem voluptatum. Velit, sequi non iste blanditiis, esse exercitationem ducimus nesciunt aut hic officia sunt sed maiores neque harum excepturi soluta, deleniti dolore corrupti! Libero, voluptatem illo distinctio voluptatibus sint adipisci, possimus alias modi maiores eos placeat dolorem perspiciatis quae corporis harum, facere aliquid nobis dicta! Maiores explicabo impedit voluptate iste at deserunt harum quisquam culpa ab ad similique, repudiandae veniam ullam, molestias voluptatibus architecto, delectus eligendi nulla quo quia. Excepturi!</p>
+    </section>
+
+    <section class="posts">
+        <article class="post">
+            <img src="https://picsum.photos/200/300?random=1" alt="Post Image">
+            <div class="post-content">
+                <h2>Post Title One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae ligula id leo blandit viverra.</p>
+                <a href="#">Read More</a>
+            </div>
+        </article>
+
+        <article class="post">
+            <img src="https://picsum.photos/200/300?random=1" alt="Post Image">
+            <div class="post-content">
+                <h2>Post Title Two</h2>
+                <p>Aliquam erat volutpat. Mauris et tortor nec eros condimentum suscipit at ac sapien.</p>
+                <a href="#">Read More</a>
+            </div>
+        </article>
+
+        <article class="post">
+            <img src="https://picsum.photos/200/300?random=1" alt="Post Image">
+            <div class="post-content">
+                <h2>Post Title Three</h2>
+                <p>Donec sed nisi non risus fermentum vulputate vel sit amet urna.</p>
+                <a href="#">Read More</a>
+            </div>
+        </article>
+    </section>
+    <section class="form-section">
+        <h2 class="form-heading">add post</h2>
+        <form action="" class="form-parent">
+            <div class="name-group group">
+                <input type="text" placeholder=" input your name" required>
+                <input type="email" placeholder=" input your email" required>
+            </div>
+            <label for="password">input your password:</label>
+            <div class="password-group group">
+                <input type="password" placeholder="input your password" required>
+                <input type="password" placeholder="confirm your password" required>
+            </div>
+            <!-- a div with 3 types of input related to a blog add -->
+             <div class="category-group group">
+                <label for="category">choose a category:</label>
+                <select id="category">
+                    <option value="none" disabled selected>select category</option>
+                    <option value="tech">tech</option>
+                    <option value="politics">politics</option>
+                    <option value="sports">sports</option>
+                </select>
+            </div>
+
+            
+
+            <div class=" file-group group">
+                <label for="file-input">input your post image</label>
+                <input id="file-input" type="file">
+            </div>
+            <div
+            class="title-group group"
+            
+            >
+                <label for="title">input post title:</label>
+                <input id="title" type="text">
+            </div>
+            <div class="release-group group" >
+                <label for="release date">when should it be reliesed:</label>
+                <input type="date" name="" id="">
+            </div>
+            <label for="content">input post content:</label>
+                <textarea id="content" rows="5" class="tex-area"></textarea>
+
+                <button class="submit-button">add post</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Awesome Blog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
